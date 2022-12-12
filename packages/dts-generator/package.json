@@ -1,0 +1,32 @@
+{
+  "name": "@ui5/dts-generator",
+  "description": "Generates TypeScript Definitions from UI5 api.json files",
+  "version": "2.3.2",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SAP/ui5-typescript.git",
+    "directory": "packages/dts-generator"
+  },
+  "main": "lib/api.js",
+  "types": "types/api.d.ts",
+  "files": [
+    ".reuse",
+    "LICENSES",
+    "types",
+    "lib"
+  ],
+  "dependencies": {
+    "lodash": "4.17.21",
+    "lodash.combinations": "18.11.1",
+    "prettier": "2.7.1",
+    "sanitize-html": "2.7.1"
+  },
+  "scripts": {
+    "ci": "npm-run-all test:*",
+    "test:apis": "tsc ./types/api.d.ts ./types/ast.d.ts"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
